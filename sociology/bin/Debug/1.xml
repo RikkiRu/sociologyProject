@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfOprosnikElem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <oprosnikElem>
+    <IsOneVariant>true</IsOneVariant>
+    <question>trololooo</question>
+    <answers>
+      <string>Траоло213ло2</string>
+      <string>Тралал213ал2</string>
+    </answers>
+  </oprosnikElem>
+  <oprosnikElem>
+    <IsOneVariant>true</IsOneVariant>
+    <question>wut</question>
+    <answers>
+      <string>Траоло213ло2</string>
+      <string>Тралал213ал2</string>
+    </answers>
+  </oprosnikElem>
+</ArrayOfOprosnikElem>
