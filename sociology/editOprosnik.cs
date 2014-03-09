@@ -11,9 +11,23 @@ namespace sociology
 {
     public partial class editOprosnik : Form
     {
-        public editOprosnik()
+        public editOprosnik(oprosnik opros)
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<string> s = new List<string>();
+            s.Add("Такие дела");
+            s.Add("Пока не роидла");
+            questionAdd qA = new questionAdd(new oprosnikElem("Воот", s, true));
+            qA.ShowDialog();
         }
     }
 }

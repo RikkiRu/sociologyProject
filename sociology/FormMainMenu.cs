@@ -18,8 +18,17 @@ namespace sociology
 
         private void button1newOprosnik_Click(object sender, EventArgs e)
         {
-            editOprosnik ed = new editOprosnik();
+            editOprosnik ed = new editOprosnik(new oprosnik());
             ed.ShowDialog();
+            if (ed.DialogResult == DialogResult.OK)
+            {
+                //сохранить
+            }
+        }
+
+        private void button7exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

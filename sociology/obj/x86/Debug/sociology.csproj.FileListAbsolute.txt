@@ -6,3 +6,4 @@ C:\Users\www.mobilkom.ru\documents\visual studio 2010\Projects\sociology\sociolo
 C:\Users\www.mobilkom.ru\documents\visual studio 2010\Projects\sociology\sociology\obj\x86\Debug\sociology.pdb
 C:\Users\www.mobilkom.ru\documents\visual studio 2010\Projects\sociology\sociology\obj\x86\Debug\sociology.FormMainMenu.resources
 C:\Users\www.mobilkom.ru\documents\visual studio 2010\Projects\sociology\sociology\obj\x86\Debug\sociology.editOprosnik.resources
+C:\Users\www.mobilkom.ru\documents\visual studio 2010\Projects\sociology\sociology\obj\x86\Debug\sociology.questionAdd.resources

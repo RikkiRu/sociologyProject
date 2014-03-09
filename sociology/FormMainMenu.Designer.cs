@@ -49,7 +49,7 @@
             // 
             this.label1title.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1title.BackColor = System.Drawing.Color.RosyBrown;
+            this.label1title.BackColor = System.Drawing.Color.Gainsboro;
             this.label1title.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1title.Location = new System.Drawing.Point(41, 9);
             this.label1title.Name = "label1title";
@@ -74,8 +74,7 @@
             // 
             // button5results
             // 
-            this.button5results.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5results.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5results.BackColor = System.Drawing.Color.Linen;
             this.button5results.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5results.Location = new System.Drawing.Point(18, 99);
             this.button5results.Name = "button5results";
@@ -87,8 +86,7 @@
             // 
             // button4load
             // 
-            this.button4load.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4load.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4load.BackColor = System.Drawing.Color.Linen;
             this.button4load.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4load.Location = new System.Drawing.Point(18, 70);
             this.button4load.Name = "button4load";
@@ -100,8 +98,7 @@
             // 
             // button3continue
             // 
-            this.button3continue.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3continue.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3continue.BackColor = System.Drawing.Color.Linen;
             this.button3continue.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3continue.Location = new System.Drawing.Point(18, 41);
             this.button3continue.Name = "button3continue";
@@ -157,8 +154,7 @@
             // 
             // button2newOpros
             // 
-            this.button2newOpros.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2newOpros.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2newOpros.BackColor = System.Drawing.Color.Linen;
             this.button2newOpros.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2newOpros.Location = new System.Drawing.Point(20, 99);
             this.button2newOpros.Name = "button2newOpros";
@@ -170,8 +166,7 @@
             // 
             // button1newOprosnik
             // 
-            this.button1newOprosnik.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1newOprosnik.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1newOprosnik.BackColor = System.Drawing.Color.Linen;
             this.button1newOprosnik.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1newOprosnik.Location = new System.Drawing.Point(20, 41);
             this.button1newOprosnik.Name = "button1newOprosnik";
@@ -190,6 +185,7 @@
             this.button6about.Name = "button6about";
             this.button6about.Size = new System.Drawing.Size(75, 23);
             this.button6about.TabIndex = 5;
+            this.button6about.TabStop = false;
             this.button6about.Text = "Справка";
             this.button6about.UseVisualStyleBackColor = true;
             // 
@@ -201,13 +197,14 @@
             this.button7exit.Name = "button7exit";
             this.button7exit.Size = new System.Drawing.Size(75, 23);
             this.button7exit.TabIndex = 6;
+            this.button7exit.TabStop = false;
             this.button7exit.Text = "Выход";
             this.button7exit.UseVisualStyleBackColor = true;
+            this.button7exit.Click += new System.EventHandler(this.button7exit_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.BackColor = System.Drawing.Color.Linen;
             this.button1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(20, 70);
             this.button1.Name = "button1";

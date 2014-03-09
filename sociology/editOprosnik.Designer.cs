@@ -45,11 +45,12 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Отмена";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 9);
+            this.label1.Location = new System.Drawing.Point(39, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 13);
             this.label1.TabIndex = 4;
@@ -70,6 +71,7 @@
             this.button2.TabIndex = 6;
             this.button2.Text = "Добавить";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 

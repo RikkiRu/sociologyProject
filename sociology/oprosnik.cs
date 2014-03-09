@@ -4,7 +4,7 @@ using System.IO;
 
 namespace sociology
 {
-    class oprosnik
+    public class oprosnik
     {
         public List<oprosnikElem> elements;
 
