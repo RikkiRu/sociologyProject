@@ -41,6 +41,7 @@
             this.button1newOprosnik = new System.Windows.Forms.Button();
             this.button6about = new System.Windows.Forms.Button();
             this.button7exit = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1spend.SuspendLayout();
             this.panel1create.SuspendLayout();
             this.SuspendLayout();
@@ -172,6 +173,7 @@
             this.button1.TabStop = false;
             this.button1.Text = "Редактировать опросник";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2newOpros
             // 
@@ -227,6 +229,12 @@
             this.button7exit.UseVisualStyleBackColor = true;
             this.button7exit.Click += new System.EventHandler(this.button7exit_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.DefaultExt = "oprosnik";
+            this.openFileDialog1.Filter = "*.oprosnik|";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -266,6 +274,7 @@
         private System.Windows.Forms.Button button6about;
         private System.Windows.Forms.Button button7exit;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

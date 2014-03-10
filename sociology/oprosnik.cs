@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 using System.IO;
+using System;
+using System.Windows.Forms;
 
 namespace sociology
 {
@@ -20,11 +22,35 @@ namespace sociology
 
         public void Save(string way)
         {
-            XmlSerializer ser = new XmlSerializer(typeof(List<oprosnikElem>));
-            FileStream fs = new FileStream(way, FileMode.Create);
-            using (StreamWriter sw = new StreamWriter(fs))
+            try
             {
-                ser.Serialize(sw, elements);
+                XmlSerializer ser = new XmlSerializer(typeof(List<oprosnikElem>));
+                FileStream fs = new FileStream(way, FileMode.Create);
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    ser.Serialize(sw, elements);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void Load(string way)
+        {
+            try
+            {
+                XmlSerializer ser = new XmlSerializer(typeof(List<oprosnikElem>));
+                FileStream fs = new FileStream(way, FileMode.Open);
+                using (StreamReader sr = new StreamReader(fs))
+                {
+                    elements = ser.Deserialize(sr) as List<oprosnikElem>;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

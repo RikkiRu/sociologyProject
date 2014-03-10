@@ -11,6 +11,8 @@ namespace sociology
 {
     public partial class FormMainMenu : Form
     {
+        bool okFileOprosnikOpen;
+
         public FormMainMenu()
         {
             InitializeComponent();
@@ -20,15 +22,29 @@ namespace sociology
         {
             editOprosnik ed = new editOprosnik(new oprosnik());
             ed.ShowDialog();
-            if (ed.DialogResult == DialogResult.OK)
-            {
-                //сохранить
-            }
         }
 
         private void button7exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            okFileOprosnikOpen = false;
+            openFileDialog1.ShowDialog();
+            if (okFileOprosnikOpen)
+            {
+                oprosnik temp = new oprosnik();
+                temp.Load(openFileDialog1.FileName);
+                editOprosnik ed = new editOprosnik(temp);
+                ed.ShowDialog();
+            }
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            okFileOprosnikOpen = true;
         }
     }
 }

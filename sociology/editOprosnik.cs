@@ -43,11 +43,6 @@ namespace sociology
             update();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             List<string> s = new List<string>();
@@ -110,6 +105,7 @@ namespace sociology
         private void button5_Click(object sender, EventArgs e)
         {
             saveFileDialog1.ShowDialog();
+            this.Close();
         }
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
