@@ -13,6 +13,7 @@ namespace sociology
     {
         bool okFileOprosnikOpen;
         bool okFileOprosSave;
+        bool okFileOprosOpen;
 
         public FormMainMenu()
         {
@@ -85,6 +86,21 @@ namespace sociology
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             okFileOprosSave = true;
+        }
+
+        private void button3continue_Click(object sender, EventArgs e)
+        {
+            okFileOprosOpen = false;
+            openFileDialog2continue.ShowDialog();
+            if (okFileOprosOpen)
+            {
+
+            }
+        }
+
+        private void openFileDialog2continue_FileOk(object sender, CancelEventArgs e)
+        {
+            okFileOprosOpen = true;
         }
     }
 }

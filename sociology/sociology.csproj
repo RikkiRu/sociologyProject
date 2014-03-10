@@ -52,11 +52,23 @@
     <Compile Include="anketa.Designer.cs">
       <DependentUpon>anketa.cs</DependentUpon>
     </Compile>
+    <Compile Include="anketaFill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="anketaFill.Designer.cs">
+      <DependentUpon>anketaFill.cs</DependentUpon>
+    </Compile>
     <Compile Include="editOprosMini.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="editOprosMini.Designer.cs">
       <DependentUpon>editOprosMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBeginOpros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBeginOpros.Designer.cs">
+      <DependentUpon>FormBeginOpros.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMainMenu.cs">
       <SubType>Form</SubType>
@@ -69,6 +81,12 @@
     </Compile>
     <Compile Include="editOprosnik.Designer.cs">
       <DependentUpon>editOprosnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainOpros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainOpros.Designer.cs">
+      <DependentUpon>mainOpros.cs</DependentUpon>
     </Compile>
     <Compile Include="opros.cs" />
     <Compile Include="oprosnik.cs" />
@@ -83,14 +101,23 @@
     <EmbeddedResource Include="anketa.resx">
       <DependentUpon>anketa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="anketaFill.resx">
+      <DependentUpon>anketaFill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="editOprosMini.resx">
       <DependentUpon>editOprosMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBeginOpros.resx">
+      <DependentUpon>FormBeginOpros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMainMenu.resx">
       <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="editOprosnik.resx">
       <DependentUpon>editOprosnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainOpros.resx">
+      <DependentUpon>mainOpros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

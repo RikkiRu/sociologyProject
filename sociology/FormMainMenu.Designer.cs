@@ -43,6 +43,7 @@
             this.button7exit = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog2continue = new System.Windows.Forms.OpenFileDialog();
             this.panel1spend.SuspendLayout();
             this.panel1create.SuspendLayout();
             this.SuspendLayout();
@@ -114,6 +115,7 @@
             this.button3continue.TabStop = false;
             this.button3continue.Text = "Продолжить опрос";
             this.button3continue.UseVisualStyleBackColor = false;
+            this.button3continue.Click += new System.EventHandler(this.button3continue_Click);
             // 
             // label1
             // 
@@ -245,6 +247,12 @@
             this.saveFileDialog1.Filter = "*.opros|";
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
+            // openFileDialog2continue
+            // 
+            this.openFileDialog2continue.Filter = "*.opros|";
+            this.openFileDialog2continue.Title = "Выберите файл опроса";
+            this.openFileDialog2continue.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2continue_FileOk);
+            // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -286,6 +294,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2continue;
     }
 }
 
