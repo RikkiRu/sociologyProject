@@ -59,12 +59,26 @@ namespace sociology
                 oprosnik temp = new oprosnik();
                 temp.Load(openFileDialog1.FileName);
 
-                saveFileDialog1.ShowDialog();
+                //создание опроса
+                editOprosMini em = new editOprosMini(temp);
+                em.ShowDialog();
+                if (em.DialogResult == DialogResult.OK)
+                {
+                    anketa ank = new anketa(em.result);
+                    if (em.result.IsAnonimus == false)
+                    {
+                        ank.ShowDialog();
+                        if (ank.DialogResult != DialogResult.OK) return;
+                    }
 
-                //if (okFileOprosSave)
-                //{
-                //    opros x = new opros(
-                //}
+                    saveFileDialog1.ShowDialog();
+                    if (okFileOprosSave)
+                    {
+                        ank.res.save(saveFileDialog1.FileName);
+                    }
+                }
+                else return;
+                //создали. сохреняем.
             }
         }
 

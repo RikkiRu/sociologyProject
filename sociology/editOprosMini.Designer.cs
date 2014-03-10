@@ -65,15 +65,19 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(203, 134);
+            this.textBox1.MaxLength = 4;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 22);
+            this.textBox1.Size = new System.Drawing.Size(66, 22);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "0";
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(220, 176);
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(15, 175);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(149, 21);
             this.checkBox1.TabIndex = 5;
@@ -88,6 +92,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "Продолжить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // editOprosMini
             // 

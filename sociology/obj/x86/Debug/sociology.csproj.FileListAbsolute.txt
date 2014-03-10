@@ -17,4 +17,5 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\
 C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Debug\sociology.questionAdd.resources
 C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Debug\sociology.csproj.GenerateResource.Cache
 C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Debug\sociology.csprojResolveAssemblyReference.cache
-C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Debug\sociology.createOpros.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Debug\sociology.anketa.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Debug\sociology.editOprosMini.resources

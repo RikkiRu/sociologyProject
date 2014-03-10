@@ -2,30 +2,89 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace sociology
 {
-    class tester
+    public class tester
     {
         public List<answer> answers;
-        public string FIO;
+        public List<string> anketa;
 
-        public tester(string fio)
+        public tester()
         {
-            FIO = fio;
             answers = new List<answer>();
+            anketa = new List<string>();
         }
     }
 
-    class opros
+    public class opros
     {
         public int maxTesters;
         public string Description;
         public List<tester> testers;
         public oprosnik selectedOprosnik;
         public bool IsAnonimus;
+        public List<string> anketa;
 
-        public opros(int TestersCount, string Description, oprosnik Oprosnik, bool anonimno)
+        public void save(string way)
+        {
+            FileStream fs = new FileStream(way, FileMode.Create);
+            using (StreamWriter sw = new StreamWriter(fs))
+            {
+                sw.WriteLine(maxTesters.ToString());
+                sw.WriteLine(Description);
+                sw.WriteLine(IsAnonimus.ToString());
+
+                foreach (string s in anketa)
+                {
+                    sw.WriteLine(s);
+                }
+                sw.WriteLine("!endGenAnketa!");
+
+                foreach (var a in testers)
+                {
+                    foreach (var b in a.anketa)
+                    {
+                        sw.WriteLine(b);
+                    }
+                    sw.WriteLine("!endAnketa!");
+
+                    foreach (var c in a.answers)
+                    {
+                        foreach (bool b in c.SelectedAnswers)
+                        {
+                            sw.WriteLine(b.ToString());
+                        }
+                        sw.WriteLine("!newAnsw!");
+                    }
+
+                    sw.WriteLine("!next!");
+                }
+
+
+               
+                    sw.WriteLine("!oprosnik!");
+                    foreach (var x in selectedOprosnik.elements)
+                    {
+                        sw.WriteLine(x.IsOneVariant.ToString());
+                        sw.WriteLine(x.question);
+                        foreach (var t in x.answers)
+                        {
+                            sw.WriteLine(t);
+                        }
+                        sw.WriteLine("!next!");
+                    }
+                    sw.WriteLine("!END!");
+                
+
+            }
+        }
+
+        public opros() { }
+
+        public opros(int TestersCount, string Description, oprosnik Oprosnik, bool anonimno, List<string> Anketa)
         {
             testers = new List<tester>();
             maxTesters = TestersCount;
@@ -35,11 +94,18 @@ namespace sociology
             {
                 selectedOprosnik.addNewElement(x.question, x.answers, x.IsOneVariant);
             }
+
+            anketa = new List<string>();
+            foreach (var x in Anketa)
+            {
+                anketa.Add(x);
+            }
+
             IsAnonimus = anonimno;
         }
     }
 
-    class answer
+    public class answer
     {
         public List<bool> SelectedAnswers;
 

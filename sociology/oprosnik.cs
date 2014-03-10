@@ -20,7 +20,7 @@ namespace sociology
             elements.Add(new oprosnikElem(question, answers, IsOneVariant));
         }
 
-        virtual public void Save(string way)
+        public void Save(string way)
         {
             try
             {
@@ -37,7 +37,7 @@ namespace sociology
             }
         }
 
-        virtual public void Load(string way)
+        public void Load(string way)
         {
             try
             {

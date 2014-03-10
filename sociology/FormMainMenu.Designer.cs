@@ -71,7 +71,7 @@
             this.panel1spend.Controls.Add(this.button3continue);
             this.panel1spend.Controls.Add(this.label1);
             this.panel1spend.Location = new System.Drawing.Point(49, 47);
-            this.panel1spend.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1spend.Margin = new System.Windows.Forms.Padding(4);
             this.panel1spend.Name = "panel1spend";
             this.panel1spend.Size = new System.Drawing.Size(237, 254);
             this.panel1spend.TabIndex = 3;
@@ -81,7 +81,7 @@
             this.button5results.BackColor = System.Drawing.Color.Linen;
             this.button5results.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5results.Location = new System.Drawing.Point(24, 122);
-            this.button5results.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5results.Margin = new System.Windows.Forms.Padding(4);
             this.button5results.Name = "button5results";
             this.button5results.Size = new System.Drawing.Size(187, 28);
             this.button5results.TabIndex = 5;
@@ -94,7 +94,7 @@
             this.button4load.BackColor = System.Drawing.Color.Linen;
             this.button4load.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4load.Location = new System.Drawing.Point(24, 86);
-            this.button4load.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4load.Margin = new System.Windows.Forms.Padding(4);
             this.button4load.Name = "button4load";
             this.button4load.Size = new System.Drawing.Size(187, 28);
             this.button4load.TabIndex = 3;
@@ -107,7 +107,7 @@
             this.button3continue.BackColor = System.Drawing.Color.Linen;
             this.button3continue.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3continue.Location = new System.Drawing.Point(24, 50);
-            this.button3continue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3continue.Margin = new System.Windows.Forms.Padding(4);
             this.button3continue.Name = "button3continue";
             this.button3continue.Size = new System.Drawing.Size(187, 28);
             this.button3continue.TabIndex = 2;
@@ -157,7 +157,7 @@
             this.panel1create.Controls.Add(this.button1newOprosnik);
             this.panel1create.Controls.Add(this.label2);
             this.panel1create.Location = new System.Drawing.Point(316, 47);
-            this.panel1create.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1create.Margin = new System.Windows.Forms.Padding(4);
             this.panel1create.Name = "panel1create";
             this.panel1create.Size = new System.Drawing.Size(237, 254);
             this.panel1create.TabIndex = 4;
@@ -167,7 +167,7 @@
             this.button1.BackColor = System.Drawing.Color.Linen;
             this.button1.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(27, 86);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(187, 28);
             this.button1.TabIndex = 3;
@@ -181,7 +181,7 @@
             this.button2newOpros.BackColor = System.Drawing.Color.Linen;
             this.button2newOpros.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2newOpros.Location = new System.Drawing.Point(27, 122);
-            this.button2newOpros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2newOpros.Margin = new System.Windows.Forms.Padding(4);
             this.button2newOpros.Name = "button2newOpros";
             this.button2newOpros.Size = new System.Drawing.Size(187, 28);
             this.button2newOpros.TabIndex = 2;
@@ -195,7 +195,7 @@
             this.button1newOprosnik.BackColor = System.Drawing.Color.Linen;
             this.button1newOprosnik.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1newOprosnik.Location = new System.Drawing.Point(27, 50);
-            this.button1newOprosnik.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1newOprosnik.Margin = new System.Windows.Forms.Padding(4);
             this.button1newOprosnik.Name = "button1newOprosnik";
             this.button1newOprosnik.Size = new System.Drawing.Size(187, 28);
             this.button1newOprosnik.TabIndex = 1;
@@ -209,7 +209,7 @@
             this.button6about.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button6about.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button6about.Location = new System.Drawing.Point(107, 309);
-            this.button6about.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6about.Margin = new System.Windows.Forms.Padding(4);
             this.button6about.Name = "button6about";
             this.button6about.Size = new System.Drawing.Size(100, 28);
             this.button6about.TabIndex = 5;
@@ -222,7 +222,7 @@
             this.button7exit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button7exit.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button7exit.Location = new System.Drawing.Point(389, 309);
-            this.button7exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7exit.Margin = new System.Windows.Forms.Padding(4);
             this.button7exit.Name = "button7exit";
             this.button7exit.Size = new System.Drawing.Size(100, 28);
             this.button7exit.TabIndex = 6;
@@ -235,11 +235,13 @@
             // 
             this.openFileDialog1.DefaultExt = "oprosnik";
             this.openFileDialog1.Filter = "*.oprosnik|";
+            this.openFileDialog1.Title = "Выберите файл опросника";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // saveFileDialog1
             // 
             this.saveFileDialog1.DefaultExt = "opros";
+            this.saveFileDialog1.FileName = "new";
             this.saveFileDialog1.Filter = "*.opros|";
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
@@ -255,7 +257,7 @@
             this.Controls.Add(this.panel1spend);
             this.Controls.Add(this.label1title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FormMainMenu";
             this.ShowIcon = false;
