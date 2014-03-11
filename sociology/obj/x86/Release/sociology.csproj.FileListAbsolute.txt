@@ -1,0 +1,14 @@
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\bin\Release\sociology.exe
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\bin\Release\sociology.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.anketa.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.anketaFill.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.editOprosMini.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.FormBeginOpros.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.FormMainMenu.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.editOprosnik.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.mainOpros.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.Properties.Resources.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.questionAdd.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.csproj.GenerateResource.Cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.exe
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.pdb

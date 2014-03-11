@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
 using System.IO;
+using System.Windows.Forms;
 
 namespace sociology
 {
@@ -27,6 +28,75 @@ namespace sociology
         public oprosnik selectedOprosnik;
         public bool IsAnonimus;
         public List<string> anketa;
+
+        public void load(string way)
+        {
+            //try
+            //{
+                FileStream fs = new FileStream(way, FileMode.Open);
+                using (StreamReader sw = new StreamReader(fs))
+                {
+                    maxTesters = Convert.ToInt32(sw.ReadLine());
+                    Description = sw.ReadLine();
+                    IsAnonimus = Convert.ToBoolean(sw.ReadLine());
+
+                    string temp = sw.ReadLine();
+                    while (temp != "!endGenAnketa!")
+                    {
+                        anketa.Add(temp);
+                        temp = sw.ReadLine();
+                    }
+
+                    temp = sw.ReadLine();
+
+                    while (temp != "!oprosnik!")
+                    {
+                        tester t = new tester();
+                        while (temp != "!next!")
+                        {
+                            while (temp != "!endAnketa!")
+                            {
+                                temp = sw.ReadLine();
+                                t.anketa.Add(temp);
+                            }
+
+                            while (temp != "!next!")
+                            {
+                                List<bool> variant = new List<bool>();
+                                while (temp != "!newAnsw!")
+                                {
+                                    temp = sw.ReadLine();
+                                    variant.Add(Convert.ToBoolean(temp));
+                                }
+                                t.answers.Add(new answer(variant));
+                            }
+                        }
+                        testers.Add(t);
+                    }
+
+                    temp = sw.ReadLine();
+                    while (temp != "!END!")
+                    {
+                        oprosnikElem x = new oprosnikElem();
+                        x.IsOneVariant = Convert.ToBoolean(temp);
+                        x.question = sw.ReadLine();
+                        temp = sw.ReadLine();
+                        while (temp != "!next!")
+                        {
+                            x.answers.Add(temp);
+                            temp = sw.ReadLine();
+                        }
+                        temp = sw.ReadLine();
+                        selectedOprosnik.elements.Add(x);
+                    }
+                }
+            //}
+
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Ошибка при загрузке" + Environment.NewLine + ex.Message);
+            //}
+        }
 
         public void save(string way)
         {
@@ -77,12 +147,15 @@ namespace sociology
                         sw.WriteLine("!next!");
                     }
                     sw.WriteLine("!END!");
-                
-
             }
         }
 
-        public opros() { }
+        public opros() 
+        { 
+            testers = new List<tester>();
+            selectedOprosnik = new oprosnik();
+            anketa = new List<string>();
+        }
 
         public opros(int TestersCount, string Description, oprosnik Oprosnik, bool anonimno, List<string> Anketa)
         {

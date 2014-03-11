@@ -17,7 +17,7 @@ namespace sociology
 
         public FormMainMenu()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private void button1newOprosnik_Click(object sender, EventArgs e)
@@ -94,7 +94,8 @@ namespace sociology
             openFileDialog2continue.ShowDialog();
             if (okFileOprosOpen)
             {
-
+                FormBeginOpros fb = new FormBeginOpros(openFileDialog2continue.FileName);
+                fb.ShowDialog();
             }
         }
 

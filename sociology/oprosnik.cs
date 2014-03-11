@@ -67,6 +67,9 @@ namespace sociology
             this.IsOneVariant = IsOneVariant;
         }
 
-        public oprosnikElem() { }
+        public oprosnikElem() 
+        {
+            answers = new List<string>();
+        }
     }
 }

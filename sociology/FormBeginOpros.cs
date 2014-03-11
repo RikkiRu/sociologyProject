@@ -11,9 +11,13 @@ namespace sociology
 {
     public partial class FormBeginOpros : Form
     {
-        public FormBeginOpros()
+        opros res;
+
+        public FormBeginOpros(string way)
         {
             InitializeComponent();
+            res = new opros();
+            res.load(way);
         }
     }
 }
