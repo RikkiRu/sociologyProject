@@ -98,8 +98,18 @@ namespace sociology
                 FormBeginOpros fb = new FormBeginOpros(openFileDialog2continue.FileName, res);
                 fb.ShowDialog();
                 if (fb.DialogResult != DialogResult.OK) return;
-                anketaFill af = new anketaFill(res);
-                af.ShowDialog();
+
+                res.testers.Insert(0, new tester());
+                if (res.IsAnonimus == false)
+                {
+                    anketaFill af = new anketaFill(res);
+                    af.ShowDialog();
+                    if (af.DialogResult != DialogResult.OK) return;
+                }
+
+                mainOpros mo = new mainOpros(res);
+                mo.ShowDialog();
+
             }
         }
 

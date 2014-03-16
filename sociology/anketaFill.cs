@@ -12,7 +12,7 @@ namespace sociology
     public partial class anketaFill : Form
     {
         opros res;
-        
+        List<TextBox> tList = new List<TextBox>();
 
         public anketaFill(opros op)
         {
@@ -21,11 +21,8 @@ namespace sociology
             dosome();
         }
 
-
-
         void dosome()
         {
-
             System.Drawing.Size size = new Size(227, 22);
             System.Drawing.Point locate = new Point(15, 30);
             int distance = 20;
@@ -49,9 +46,31 @@ namespace sociology
                 locate.Y += 25;
                 this.Controls.Add(ltemp);
                 this.Controls.Add(ttemp);
+                tList.Add(ttemp);
             }
 
+            locate.X += 170;
+            locate.Y += 10;
+            Button b = new Button();
+            b.Location = locate;
+            b.Name = "button1";
+            b.Size = new System.Drawing.Size(144, 27);
+            b.TabIndex = 1;
+            b.Text = "Пройти опрос";
+            b.UseVisualStyleBackColor = true;
+            b.Click += new EventHandler(OkGoNext);
+            Controls.Add(b);
+        }
 
+        void OkGoNext(object sender, EventArgs e)
+        {
+            foreach (TextBox t in tList)
+            {
+                res.testers[0].anketa.Add(t.Text); //новый тестер всегда нулевой
+            }
+
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void label_Click(object sender, EventArgs e)

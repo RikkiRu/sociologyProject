@@ -28,32 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox1quest = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // checkedListBox1
+            // richTextBox1quest
             // 
-            this.checkedListBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(12, 87);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(379, 189);
-            this.checkedListBox1.TabIndex = 1;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.richTextBox1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(379, 60);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.richTextBox1quest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBox1quest.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.richTextBox1quest.Location = new System.Drawing.Point(12, 12);
+            this.richTextBox1quest.Name = "richTextBox1quest";
+            this.richTextBox1quest.ReadOnly = true;
+            this.richTextBox1quest.Size = new System.Drawing.Size(379, 60);
+            this.richTextBox1quest.TabIndex = 2;
+            this.richTextBox1quest.Text = "";
             // 
             // button1
             // 
@@ -69,6 +60,7 @@
             this.progressBar1.Location = new System.Drawing.Point(12, 292);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(197, 29);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar1.TabIndex = 4;
             // 
             // button2
@@ -80,16 +72,25 @@
             this.button2.Text = "Назад";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Location = new System.Drawing.Point(12, 78);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(379, 208);
+            this.panel1.TabIndex = 6;
+            // 
             // mainOpros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 333);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.richTextBox1quest);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "mainOpros";
@@ -101,10 +102,10 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox1quest;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel1;
     }
 }
