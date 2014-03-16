@@ -32,6 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3ostalos = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label3desc = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -69,12 +70,23 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Пройти опрос";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label3desc
+            // 
+            this.label3desc.Location = new System.Drawing.Point(15, 29);
+            this.label3desc.Name = "label3desc";
+            this.label3desc.ReadOnly = true;
+            this.label3desc.Size = new System.Drawing.Size(314, 113);
+            this.label3desc.TabIndex = 5;
+            this.label3desc.Text = "";
             // 
             // FormBeginOpros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 251);
+            this.Controls.Add(this.label3desc);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3ostalos);
             this.Controls.Add(this.label2);
@@ -93,5 +105,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3ostalos;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox label3desc;
     }
 }

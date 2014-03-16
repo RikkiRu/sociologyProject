@@ -36,11 +36,18 @@ namespace sociology
                 FileStream fs = new FileStream(way, FileMode.Open);
                 using (StreamReader sw = new StreamReader(fs))
                 {
+                    string temp="";
                     maxTesters = Convert.ToInt32(sw.ReadLine());
-                    Description = sw.ReadLine();
+
+                    temp = sw.ReadLine();
+                    while (temp != "!endDescr!")
+                    {
+                        Description += temp+Environment.NewLine;
+                        temp = sw.ReadLine();
+                    }
                     IsAnonimus = Convert.ToBoolean(sw.ReadLine());
 
-                    string temp = sw.ReadLine();
+                    temp = sw.ReadLine();
                     while (temp != "!endGenAnketa!")
                     {
                         anketa.Add(temp);
@@ -105,6 +112,7 @@ namespace sociology
             {
                 sw.WriteLine(maxTesters.ToString());
                 sw.WriteLine(Description);
+                sw.WriteLine("!endDescr!");
                 sw.WriteLine(IsAnonimus.ToString());
 
                 foreach (string s in anketa)

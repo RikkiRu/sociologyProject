@@ -11,13 +11,18 @@ namespace sociology
 {
     public partial class FormBeginOpros : Form
     {
-        opros res;
-
-        public FormBeginOpros(string way)
+        public FormBeginOpros(string way, opros x)
         {
             InitializeComponent();
-            res = new opros();
-            res.load(way);
+            x.load(way);
+            label3ostalos.Text = (x.maxTesters - x.testers.Count).ToString();
+            label3desc.Text = x.Description;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }
