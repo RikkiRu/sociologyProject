@@ -188,6 +188,38 @@ namespace sociology
 
             IsAnonimus = anonimno;
         }
+
+        public bool connectOpr (string add)
+        {
+            opros op = new opros();
+            op.load(add);
+
+            if (this.anketa.Count != op.anketa.Count) return false;
+            for (int i=0; i<op.anketa.Count; i++)
+            {
+                if (this.anketa[i] != op.anketa[i]) return false;
+            }
+
+            foreach (var x in op.testers)
+            {
+                tester t = new tester();
+                foreach (var a in x.anketa)
+                {
+                    t.anketa.Add(a);
+                }
+                foreach (var a in x.answers)
+                {
+                    answer answ = new answer(new List<bool>());
+                    foreach (var b in a.SelectedAnswers)
+                    {
+                        answ.SelectedAnswers.Add(b);
+                    }
+                    t.answers.Add(answ);
+                }
+                this.testers.Add(t);
+            }
+            return true;
+        }
     }
 
     public class answer

@@ -81,6 +81,7 @@ namespace sociology
                 else return;
                 //создали. сохреняем.
             }
+            MessageBox.Show("Сохранено");
         }
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
@@ -119,6 +120,52 @@ namespace sociology
         private void openFileDialog2continue_FileOk(object sender, CancelEventArgs e)
         {
             okFileOprosOpen = true;
+        }
+
+        private void button4load_Click(object sender, EventArgs e)
+        {
+            string t = openFileDialog2continue.Title;
+
+            okFileOprosOpen = false;
+            openFileDialog2continue.Title = "Выберите исходный опросник";
+            openFileDialog2continue.ShowDialog();
+            if (!okFileOprosOpen) return;
+
+            string source = openFileDialog2continue.FileName;
+
+            okFileOprosOpen = false;
+            openFileDialog2continue.Title = "Выберите догружаемый опросник";
+            openFileDialog2continue.ShowDialog();
+            if (!okFileOprosOpen) return;
+
+            string add = openFileDialog2continue.FileName;
+
+            opros res = new opros();
+            res.load(source);
+            if (!res.connectOpr(add))
+            {
+                MessageBox.Show("У опросников должны быть одинаковые анкеты"+Environment.NewLine+"Кроме того, они должны быть основаны на одном и том же опроснике");
+                return;
+            }
+
+            openFileDialog2continue.Title = t;
+
+            okFileOprosSave = false;
+            saveFileDialog1.ShowDialog();
+            if (!okFileOprosSave) return;
+            res.save(saveFileDialog1.FileName);
+
+            MessageBox.Show("Результат сохранён");
+        }
+
+        private void button5results_Click(object sender, EventArgs e)
+        {
+            okFileOprosOpen = false;
+            openFileDialog2continue.ShowDialog();
+            if (!okFileOprosOpen) return;
+
+            resultsForm rF = new resultsForm(openFileDialog2continue.FileName);
+            rF.ShowDialog();
         }
     }
 }

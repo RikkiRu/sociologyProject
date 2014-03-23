@@ -16,6 +16,12 @@ namespace sociology
             InitializeComponent();
             x.load(way);
             label3ostalos.Text = (x.maxTesters - x.testers.Count).ToString();
+            if (x.maxTesters - x.testers.Count < 1)
+            {
+                label3ostalos.Text = "0";
+                button1.Enabled = false;
+                button1.Text = "Опрос завершён";
+            }
             label3desc.Text = x.Description;
         }
 

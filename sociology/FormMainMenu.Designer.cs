@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.label1title = new System.Windows.Forms.Label();
             this.panel1spend = new System.Windows.Forms.Panel();
             this.button5results = new System.Windows.Forms.Button();
@@ -89,6 +90,7 @@
             this.button5results.TabStop = false;
             this.button5results.Text = "Результаты";
             this.button5results.UseVisualStyleBackColor = false;
+            this.button5results.Click += new System.EventHandler(this.button5results_Click);
             // 
             // button4load
             // 
@@ -102,6 +104,7 @@
             this.button4load.TabStop = false;
             this.button4load.Text = "Догрузить данные";
             this.button4load.UseVisualStyleBackColor = false;
+            this.button4load.Click += new System.EventHandler(this.button4load_Click);
             // 
             // button3continue
             // 
@@ -245,6 +248,7 @@
             this.saveFileDialog1.DefaultExt = "opros";
             this.saveFileDialog1.FileName = "new";
             this.saveFileDialog1.Filter = "*.opros|";
+            this.saveFileDialog1.Title = "Сохраните результат";
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
             // openFileDialog2continue
@@ -265,10 +269,10 @@
             this.Controls.Add(this.panel1spend);
             this.Controls.Add(this.label1title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FormMainMenu";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Программа проведения опросов";
             this.panel1spend.ResumeLayout(false);
