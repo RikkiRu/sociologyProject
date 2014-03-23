@@ -99,7 +99,7 @@ namespace sociology
                 fb.ShowDialog();
                 if (fb.DialogResult != DialogResult.OK) return;
 
-                res.testers.Insert(0, new tester());
+                res.testers.Insert(0, new tester()); //0ой тестер
                 if (res.IsAnonimus == false)
                 {
                     anketaFill af = new anketaFill(res);
@@ -110,6 +110,9 @@ namespace sociology
                 mainOpros mo = new mainOpros(res);
                 mo.ShowDialog();
 
+                if (mo.DialogResult != DialogResult.OK) return;
+                res.save(openFileDialog2continue.FileName);
+                MessageBox.Show("Опрос пройден. Результаты сохранены.");
             }
         }
 

@@ -19,6 +19,11 @@ namespace sociology
             InitializeComponent();
             res = x;
             changePage();
+
+            foreach (var i in res.selectedOprosnik.elements) //заполним список ответов пустотой :\
+            {
+                res.testers[0].answers.Add(new answer(new List<bool>()));
+            }
         }
 
         void changePage()
@@ -52,7 +57,36 @@ namespace sociology
                 pos.Y += 30;
             }
 
-            progressBar1.Value = page * 100 / res.selectedOprosnik.elements.Count();
+            progressBar1.Value = (page+1) * 100 / res.selectedOprosnik.elements.Count();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //назад
+            if (page > 0) page--;
+            changePage();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //вперед
+            if (page < res.selectedOprosnik.elements.Count - 1)
+            {
+                page++;
+                res.testers[0].answers[page].SelectedAnswers.Clear();
+                foreach (object u in this.panel1.Controls)
+                {
+                    if (u is RadioButton) res.testers[0].answers[page].SelectedAnswers.Add((u as RadioButton).Checked);
+                    if (u is CheckBox) res.testers[0].answers[page].SelectedAnswers.Add((u as CheckBox).Checked);
+                }
+                changePage();
+            }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
         }
     }
 }

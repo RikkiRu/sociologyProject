@@ -73,11 +73,14 @@ namespace sociology
                                 while (temp != "!newAnsw!")
                                 {
                                     temp = sw.ReadLine();
-                                    variant.Add(Convert.ToBoolean(temp));
+                                    if (temp == "+") variant.Add(true);
+                                    else variant.Add(false);
                                 }
+                                temp = sw.ReadLine();
                                 t.answers.Add(new answer(variant));
                             }
                         }
+                        temp = sw.ReadLine();
                         testers.Add(t);
                     }
 
@@ -133,7 +136,8 @@ namespace sociology
                     {
                         foreach (bool b in c.SelectedAnswers)
                         {
-                            sw.WriteLine(b.ToString());
+                            if (b) sw.WriteLine("+");
+                            else sw.WriteLine("-");
                         }
                         sw.WriteLine("!newAnsw!");
                     }
