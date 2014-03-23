@@ -23,7 +23,10 @@ namespace sociology
         private void button2_Click(object sender, EventArgs e)
         {
             //данные ответов
-
+            AnswersData ad = new AnswersData(res);
+            this.Visible = false;
+            ad.ShowDialog();
+            this.Close();
         }
     }
 }

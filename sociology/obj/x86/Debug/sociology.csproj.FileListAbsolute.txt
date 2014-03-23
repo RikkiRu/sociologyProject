@@ -22,3 +22,5 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\
 C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Debug\sociology.anketaFill.resources
 C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Debug\sociology.FormBeginOpros.resources
 C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Debug\sociology.mainOpros.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Debug\sociology.AnswersData.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Debug\sociology.resultsForm.resources
