@@ -24,6 +24,7 @@ namespace sociology
         {
             editOprosnik ed = new editOprosnik(new oprosnik());
             ed.ShowDialog();
+            if (ed.DialogResult == DialogResult.OK) MessageBox.Show("Сохранено");
         }
 
         private void button7exit_Click(object sender, EventArgs e)
@@ -76,12 +77,13 @@ namespace sociology
                     if (okFileOprosSave)
                     {
                         ank.res.save(saveFileDialog1.FileName);
+                        MessageBox.Show("Сохранено");
                     }
                 }
                 else return;
                 //создали. сохреняем.
             }
-            MessageBox.Show("Сохранено");
+
         }
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)

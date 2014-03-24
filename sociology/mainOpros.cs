@@ -70,16 +70,18 @@ namespace sociology
 
         private void button1_Click(object sender, EventArgs e)
         {
+            res.testers[0].answers[page].SelectedAnswers.Clear();
+            foreach (object u in this.panel1.Controls)
+            {
+                if (u is RadioButton) res.testers[0].answers[page].SelectedAnswers.Add((u as RadioButton).Checked);
+                if (u is CheckBox) res.testers[0].answers[page].SelectedAnswers.Add((u as CheckBox).Checked);
+            }
+
             //вперед
             if (page < res.selectedOprosnik.elements.Count - 1)
             {
                 page++;
-                res.testers[0].answers[page].SelectedAnswers.Clear();
-                foreach (object u in this.panel1.Controls)
-                {
-                    if (u is RadioButton) res.testers[0].answers[page].SelectedAnswers.Add((u as RadioButton).Checked);
-                    if (u is CheckBox) res.testers[0].answers[page].SelectedAnswers.Add((u as CheckBox).Checked);
-                }
+ 
                 changePage();
             }
             else

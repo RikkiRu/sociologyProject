@@ -238,22 +238,29 @@
             // 
             // openFileDialog1
             // 
+            this.openFileDialog1.AutoUpgradeEnabled = false;
             this.openFileDialog1.DefaultExt = "oprosnik";
             this.openFileDialog1.Filter = "*.oprosnik|";
+            this.openFileDialog1.InitialDirectory = "save";
             this.openFileDialog1.Title = "Выберите файл опросника";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // saveFileDialog1
             // 
+            this.saveFileDialog1.AutoUpgradeEnabled = false;
             this.saveFileDialog1.DefaultExt = "opros";
             this.saveFileDialog1.FileName = "new";
             this.saveFileDialog1.Filter = "*.opros|";
+            this.saveFileDialog1.InitialDirectory = "save";
             this.saveFileDialog1.Title = "Сохраните результат";
             this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
             // openFileDialog2continue
             // 
+            this.openFileDialog2continue.AutoUpgradeEnabled = false;
+            this.openFileDialog2continue.FileName = "файл опроса";
             this.openFileDialog2continue.Filter = "*.opros|";
+            this.openFileDialog2continue.InitialDirectory = "save";
             this.openFileDialog2continue.Title = "Выберите файл опроса";
             this.openFileDialog2continue.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2continue_FileOk);
             // 

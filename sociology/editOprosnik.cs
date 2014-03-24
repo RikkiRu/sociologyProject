@@ -105,12 +105,14 @@ namespace sociology
         private void button5_Click(object sender, EventArgs e)
         {
             saveFileDialog1.ShowDialog();
+            if(this.DialogResult==DialogResult.OK)
             this.Close();
         }
 
         private void saveFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             oprosnikX.Save(saveFileDialog1.FileName);
+            this.DialogResult = DialogResult.OK;
         }
     }
 }

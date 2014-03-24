@@ -63,21 +63,26 @@ namespace sociology
                         {
                             while (temp != "!endAnketa!")
                             {
-                                temp = sw.ReadLine();
                                 t.anketa.Add(temp);
+                                temp = sw.ReadLine();
                             }
+                            temp = sw.ReadLine();
 
                             while (temp != "!next!")
                             {
-                                List<bool> variant = new List<bool>();
-                                while (temp != "!newAnsw!")
+
+                                if (temp != "!next!")
                                 {
+                                    List<bool> variant = new List<bool>();
+                                    while (temp != "!newAnsw!")
+                                    {
+                                        if (temp == "+") variant.Add(true);
+                                        else variant.Add(false);
+                                        temp = sw.ReadLine();
+                                    }
+                                    t.answers.Add(new answer(variant));
                                     temp = sw.ReadLine();
-                                    if (temp == "+") variant.Add(true);
-                                    else variant.Add(false);
                                 }
-                                temp = sw.ReadLine();
-                                t.answers.Add(new answer(variant));
                             }
                         }
                         temp = sw.ReadLine();
