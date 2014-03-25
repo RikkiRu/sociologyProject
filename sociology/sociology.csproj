@@ -113,6 +113,12 @@
       <DependentUpon>mainOpros.cs</DependentUpon>
     </Compile>
     <Compile Include="opros.cs" />
+    <Compile Include="OproshinieData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OproshinieData.Designer.cs">
+      <DependentUpon>OproshinieData.cs</DependentUpon>
+    </Compile>
     <Compile Include="oprosnik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -127,6 +133,12 @@
     </Compile>
     <Compile Include="resultsForm.Designer.cs">
       <DependentUpon>resultsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="testerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="testerView.Designer.cs">
+      <DependentUpon>testerView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="anketa.resx">
       <DependentUpon>anketa.cs</DependentUpon>
@@ -152,6 +164,9 @@
     <EmbeddedResource Include="mainOpros.resx">
       <DependentUpon>mainOpros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OproshinieData.resx">
+      <DependentUpon>OproshinieData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -166,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="resultsForm.resx">
       <DependentUpon>resultsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="testerView.resx">
+      <DependentUpon>testerView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

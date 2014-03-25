@@ -24,9 +24,7 @@ namespace sociology
         {
             //данные ответов
             AnswersData ad = new AnswersData(res);
-            this.Visible = false;
             ad.ShowDialog();
-            this.Close();
         }
     }
 }
