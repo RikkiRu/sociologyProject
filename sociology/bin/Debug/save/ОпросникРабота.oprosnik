@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfOprosnikElem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <oprosnikElem>
+    <IsOneVariant>true</IsOneVariant>
+    <question>Проводятся ли у вас у компании проверки на полиграфе ("детекторе лжи")?</question>
+    <answers>
+      <string>да, для всех сотрудников</string>
+      <string>да, для определенных позиций</string>
+      <string>нет</string>
+    </answers>
+  </oprosnikElem>
+  <oprosnikElem>
+    <IsOneVariant>true</IsOneVariant>
+    <question>«Считаете ли Вы целесообразным применение полиграфа ("детектора лжи") для тестирования соискателей при приёме на работу?»</question>
+    <answers>
+      <string>да, для всех позиций	</string>
+      <string>да, но только для определенных позиций</string>
+      <string>нет	</string>
+      <string>затрудняюсь ответить</string>
+    </answers>
+  </oprosnikElem>
+  <oprosnikElem>
+    <IsOneVariant>true</IsOneVariant>
+    <question>«Согласны ли Вы пройти проверку на детекторе лжи при приёме на работу?»</question>
+    <answers>
+      <string>Да</string>
+      <string>Нет</string>
+      <string>Затрудняюсь</string>
+    </answers>
+  </oprosnikElem>
+  <oprosnikElem>
+    <IsOneVariant>false</IsOneVariant>
+    <question>Выберите пункты</question>
+    <answers>
+      <string>я работал в офисе</string>
+      <string>я работал на заводе</string>
+      <string>я работал руководителем</string>
+    </answers>
+  </oprosnikElem>
+</ArrayOfOprosnikElem>

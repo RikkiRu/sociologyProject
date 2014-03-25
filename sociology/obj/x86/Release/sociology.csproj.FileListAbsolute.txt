@@ -12,3 +12,5 @@ C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\
 C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.csproj.GenerateResource.Cache
 C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.exe
 C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.pdb
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.AnswersData.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\socioilogy\sociologyProject\sociology\obj\x86\Release\sociology.resultsForm.resources

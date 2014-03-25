@@ -42,43 +42,32 @@ namespace sociology
                 }
             }
 
-            tableLayoutPanel1.Controls.Clear();
-            tableLayoutPanel1.RowCount = x.answers.Count+1;
-      
-            Label nl = new Label();
-            nl.Text = "Ответ";
-            tableLayoutPanel1.Controls.Add(nl, 0, 0);
-            nl = new Label();
-            nl.Text = "Выбрано";
-            tableLayoutPanel1.Controls.Add(nl, 1, 0);
-            nl = new Label();
-            nl.Text = "%";
-            tableLayoutPanel1.Controls.Add(nl, 2, 0);
+            dataGridView1.Rows.Clear();
 
             for (int i = 0; i < x.answers.Count; i++)
             {
-                Label l = new Label();
-                l.Text = x.answers[i];
-                tableLayoutPanel1.Controls.Add(l, 0, i + 1);
+                dataGridView1.Rows.Add(new DataGridViewRow());
+                dataGridView1.Rows[i].Cells[0].Value = x.answers[i];
 
-                int temp = 0;
+                float temp = 0;
                 foreach (var it in res.testers)
                 {
                     if (it.answers[nAnsw].SelectedAnswers[i] == true) temp++;
                 }
-                l = new Label();
-                l.Text = temp.ToString();
-                tableLayoutPanel1.Controls.Add(l, 1, i + 1);
+                dataGridView1.Rows[i].Cells[1].Value = temp.ToString();
                 if(res.testers.Count!=0) temp = temp * 100 / res.testers.Count;
-                l = new Label();
-                l.Text = temp.ToString();
-                tableLayoutPanel1.Controls.Add(l, 2, i + 1);
+                dataGridView1.Rows[i].Cells[2].Value = temp.ToString();
             }
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             info();
+        }
+
+        void clickLabel(object sender, EventArgs e)
+        {
+            MessageBox.Show((sender as Label).Text);
         }
     }
 }

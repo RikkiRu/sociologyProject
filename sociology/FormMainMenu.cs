@@ -129,21 +129,21 @@ namespace sociology
             string t = openFileDialog2continue.Title;
 
             okFileOprosOpen = false;
-            openFileDialog2continue.Title = "Выберите исходный опросник";
+            openFileDialog2continue.Title = "Выберите исходный опрос";
             openFileDialog2continue.ShowDialog();
             if (!okFileOprosOpen) return;
 
             string source = openFileDialog2continue.FileName;
 
             okFileOprosOpen = false;
-            openFileDialog2continue.Title = "Выберите догружаемый опросник";
+            openFileDialog2continue.Title = "Выберите догружаемый опрос";
             openFileDialog2continue.ShowDialog();
             if (!okFileOprosOpen) return;
 
             string add = openFileDialog2continue.FileName;
 
             opros res = new opros();
-            res.load(source);
+            if (!res.load(source)) { MessageBox.Show("Выбраный файл не является опросом"); };
             if (!res.connectOpr(add))
             {
                 MessageBox.Show("У опросников должны быть одинаковые анкеты"+Environment.NewLine+"Кроме того, они должны быть основаны на одном и том же опроснике");

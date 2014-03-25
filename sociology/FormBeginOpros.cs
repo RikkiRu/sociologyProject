@@ -14,7 +14,7 @@ namespace sociology
         public FormBeginOpros(string way, opros x)
         {
             InitializeComponent();
-            x.load(way);
+            if (!x.load(way)) { MessageBox.Show("Это не файл опроса"); };
             label3ostalos.Text = (x.maxTesters - x.testers.Count).ToString();
             if (x.maxTesters - x.testers.Count < 1)
             {

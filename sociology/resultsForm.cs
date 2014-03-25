@@ -17,7 +17,7 @@ namespace sociology
         {
             InitializeComponent();
             res = new opros();
-            res.load(way);
+            if (!res.load(way)) { MessageBox.Show("Выбраный файл не является опросом"); }
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -29,7 +29,7 @@ namespace sociology
         public bool IsAnonimus;
         public List<string> anketa;
 
-        public void load(string way)
+        public bool load(string way)
         {
             //try
             //{
@@ -37,6 +37,10 @@ namespace sociology
                 using (StreamReader sw = new StreamReader(fs))
                 {
                     string temp="";
+
+                    temp=sw.ReadLine();
+                    if (temp != "!realOprosFile!") return false;
+
                     maxTesters = Convert.ToInt32(sw.ReadLine());
 
                     temp = sw.ReadLine();
@@ -104,6 +108,7 @@ namespace sociology
                         temp = sw.ReadLine();
                         selectedOprosnik.elements.Add(x);
                     }
+                
                 }
             //}
 
@@ -111,6 +116,7 @@ namespace sociology
             //{
             //    MessageBox.Show("Ошибка при загрузке" + Environment.NewLine + ex.Message);
             //}
+            return true;
         }
 
         public void save(string way)
@@ -118,6 +124,7 @@ namespace sociology
             FileStream fs = new FileStream(way, FileMode.Create);
             using (StreamWriter sw = new StreamWriter(fs))
             {
+                sw.WriteLine("!realOprosFile!");
                 sw.WriteLine(maxTesters.ToString());
                 sw.WriteLine(Description);
                 sw.WriteLine("!endDescr!");
@@ -197,7 +204,7 @@ namespace sociology
         public bool connectOpr (string add)
         {
             opros op = new opros();
-            op.load(add);
+            if (!op.load(add)) return false;
 
             if (this.anketa.Count != op.anketa.Count) return false;
             for (int i=0; i<op.anketa.Count; i++)
