@@ -81,6 +81,7 @@
             this.Name = "testerView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "testerView";
+            this.Load += new System.EventHandler(this.testerView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

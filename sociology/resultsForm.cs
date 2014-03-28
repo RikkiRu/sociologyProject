@@ -26,5 +26,11 @@ namespace sociology
             AnswersData ad = new AnswersData(res);
             ad.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OproshinieData od = new OproshinieData(res);
+            od.ShowDialog();
+        }
     }
 }
