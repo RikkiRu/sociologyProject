@@ -210,5 +210,10 @@ namespace sociology
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button6about_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Программа проведения опросов" + Environment.NewLine + "Волков А.А., Солдаткин А.Н." + Environment.NewLine + "УлГТУ 2014");
+        }
     }
 }
