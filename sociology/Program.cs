@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace sociology
@@ -15,7 +13,14 @@ namespace sociology
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMainMenu());
+            try
+            {
+                Application.Run(new FormMainMenu());
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

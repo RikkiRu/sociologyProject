@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfOprosnikElem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <oprosnikElem>
+    <IsOneVariant>false</IsOneVariant>
+    <question>Цвет</question>
+    <answers>
+      <string>Синий</string>
+      <string>Красный</string>
+      <string>Зеленый</string>
+    </answers>
+  </oprosnikElem>
+  <oprosnikElem>
+    <IsOneVariant>false</IsOneVariant>
+    <question>Сделайте выбор</question>
+    <answers>
+      <string>Волга</string>
+      <string>Днепр</string>
+      <string>Нил</string>
+      <string>Амазонка</string>
+    </answers>
+  </oprosnikElem>
+  <oprosnikElem>
+    <IsOneVariant>true</IsOneVariant>
+    <question>Еда</question>
+    <answers>
+      <string>Макароны</string>
+      <string>Сок</string>
+    </answers>
+  </oprosnikElem>
+  <oprosnikElem>
+    <IsOneVariant>true</IsOneVariant>
+    <question>Политика</question>
+    <answers>
+      <string>Либерал</string>
+      <string>Консерватор</string>
+      <string>Затрудняюсь</string>
+    </answers>
+  </oprosnikElem>
+</ArrayOfOprosnikElem>

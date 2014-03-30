@@ -31,8 +31,8 @@ namespace sociology
 
         public bool load(string way)
         {
-            //try
-            //{
+            try
+            {
                 FileStream fs = new FileStream(way, FileMode.Open);
                 using (StreamReader sw = new StreamReader(fs))
                 {
@@ -110,12 +110,12 @@ namespace sociology
                     }
                 
                 }
-            //}
+            }
 
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Ошибка при загрузке" + Environment.NewLine + ex.Message);
-            //}
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка при загрузке" + Environment.NewLine + ex.Message);
+            }
             return true;
         }
 

@@ -40,27 +40,30 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 30);
+            this.treeView1.Location = new System.Drawing.Point(9, 24);
+            this.treeView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(261, 332);
+            this.treeView1.Size = new System.Drawing.Size(197, 270);
             this.treeView1.TabIndex = 2;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 9);
+            this.label1.Location = new System.Drawing.Point(47, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 17);
+            this.label1.Size = new System.Drawing.Size(96, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Выберите вопрос";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(422, 9);
+            this.label2.Location = new System.Drawing.Point(316, 7);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 17);
+            this.label2.Size = new System.Drawing.Size(91, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Данные ответов";
             // 
@@ -74,14 +77,15 @@
             this.c0,
             this.c1,
             this.c2});
-            this.dataGridView1.Location = new System.Drawing.Point(279, 30);
+            this.dataGridView1.Location = new System.Drawing.Point(209, 24);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ShowCellErrors = false;
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(561, 332);
+            this.dataGridView1.Size = new System.Drawing.Size(421, 270);
             this.dataGridView1.TabIndex = 6;
             // 
             // c0
@@ -104,17 +108,18 @@
             // 
             // AnswersData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(852, 374);
+            this.ClientSize = new System.Drawing.Size(639, 304);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.treeView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AnswersData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AnswersData";
+            this.Text = "Данные ответов";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
